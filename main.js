@@ -208,14 +208,14 @@ function getData() {
     if (a[1] == "" || a[1] == undefined) {
       a[1] = 0;
     }
-    if (chk.test(time) || !isNaN(time)) {
+    if (chk.test(time) && isNaN(time.trim()) == false) {
       modalDiv.style.display = "none";
       modalDiv.className = "modal animUp";
       modalDiv.setAttribute("clicked", "false");
       addBtn.setAttribute("style", "transform: rotate(0deg); color: #8e8e8e");
       let timestamp = a[0] + " Hours " + a[1] + " Minutes";
       task_card = createCard(task_name, timestamp);
-
+      error.style.opacity = "0";
       mid.appendChild(task_card);
     } else {
       error.innerText = "Enter a valid time [ format > HH:MM ]";
@@ -226,9 +226,6 @@ function getData() {
     error.style.opacity = "1";
   }
 
-  if (task_name != "" && time != "") {
-    let chk = /\s|[0-9]{0,2}:[0-6][0-9]/;
-  }
 }
 
 function remove(id) {
