@@ -255,7 +255,7 @@ function styleCompletedTask(id) {
   card = document.getElementById(id);
   card.style.border = "1px solid #64e6a9";
   card.children[1].children[0].style.color = "#64e6a9";
-  card.children[1].children[0].innerText = "Completed";
+  card.children[1].children[0].children[0].innerText = "Completed";
   card.children[1].children[1].children[1].style.display = "none";
   card.setAttribute(
     "style",
