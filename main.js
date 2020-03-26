@@ -202,10 +202,10 @@ function getData() {
     time = time.replace(/ /g, '');
     a = time.split(":");
     if (a[0] == "") {
-      a[0] = 0;
+      a[0] = "0";
     }
     if (a[1] == "" || a[1] == undefined) {
-      a[1] = 0;
+      a[1] = "0";
     }
 
     if (isNaN(a[0].trim()) == false && isNaN(a[1].trim()) == false) {
@@ -216,7 +216,7 @@ function getData() {
         addBtn.setAttribute("style", "transform: rotate(0deg); color: #8e8e8e");
         let timestamp = a[0] + " Hours " + a[1] + " Minutes";
         task_card = createCard(task_name, timestamp);
-
+        error.style.opacity = "0";
         mid.appendChild(task_card);
       } else {
         error.innerText = "Enter a valid time [ format > HH:MM ]";
