@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="addOldTasks()">
+    <section class="main">
+      <div clicked="false" class="modal">
+        <div class="center">
+          <label for="name">Task Name</label>
+
+          <input type="text" name="name" />
+
+          <label for="name">How Many Hours?</label>
+
+          <input
+            maxlength="5"
+            placeholder="HH:MM or H or :MM"
+            type="text"
+            name="time"
+            required="true "
+          />
+
+          <button onclick="getData()" type="submit">ADD</button>
+          <span clicked="true" class="error">enter correct time</span>
+        </div>
+      </div>
+
+      <div class="top">
+        <h2>taskmanager</h2>
+        <a href="#">LOGIN / SIGNUP</a>
+      </div>
+
+      <div class="mid"></div>
+
+      <div class="bottom">
+        <div class="left">
+          <p class="info">TOTAL <span>0 HOURS</span> OF TASK REMAINS</p>
+          <!-- <div class="visualization">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+            <span class="four"></span>
+          </div> -->
+        </div>
+        <div class="right">
+          <button class="addBtn" onclick="modal()">
+            +
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="./main.js"></script>
+    <!-- <script src="./TaskCard.js"></script> -->
+  </body>
+</html>
