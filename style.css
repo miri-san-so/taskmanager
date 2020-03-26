@@ -383,8 +383,6 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: flex-start;
     align-items: center;
     height: 30px;
-    padding: 0.5em 2em;
-    padding-left: 4%;
     color: #c1002d;
     font-weight: 300;
   }
