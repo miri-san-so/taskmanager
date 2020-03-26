@@ -349,8 +349,9 @@ input[type=number]::-webkit-outer-spin-button {
   .task-card {
     width: 95% !important;
   }
-  .timestamp > h3 {
+  .timestamp > p {
     font-size: 0.8rem;
+    padding: 2px 20px;
   }
 
   .task-card > .card-footer > .controls > .remove,
